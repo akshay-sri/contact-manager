@@ -28,3 +28,41 @@ background:#FFFFFF;
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px;
 }
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.sidebar a {
+  display: block;
+   color: black;
+   padding: 14px;
+   text-decoration: none;
+  color:gray;
+}
+.sidebar a:hover{
+background:#e2e2e2;
+}
+.sidebar .divider{
+height:.5px;
+width:80% !important;
+background:#e2e2e2;
+margin-top:10px;
+}
+.content{
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+.sidebar .crossBtn{
+position:absolute;
+top:0;
+right:35px;
+font-size:36px;
+cursor:pointer;
+}
