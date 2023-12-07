@@ -12,11 +12,16 @@
     <div class="card">
         <div class="card-body">
             <h1 class="text-center">Your Contacts</h1>
+            <div class="search-container my-3">
+                <input onkeyup="search()" id="search-input" type="text" class="form-control font-italic" placeholder="Search your contacts..."/>
+                <div class="search-result">
 
+                </div>
+            </div>
             <table class="table">
                 <thead class="thread-dark">
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">CONTACTID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
@@ -25,13 +30,13 @@
                 </thead>
                 <tbody>
                 <tr th:each="c : ${contacts}">
-                    <th scope="row" th:text="${'SCM2023'+c.contactId}">1</th>
+                    <th scope="row" th:text="${'USER'+c.contactId}">1</th>
                     <td>
                         <img src="" class="contact_image" th:src="${c.contactImage}" alt="profile photo">
                     <span th:text="${c.contactName}"></span>
                     </td>
                     <td>
-                        <a th:href="@{/contact/{id}(id=${c.contactId})}">
+                        <a>
                             <span th:text="${c.contactEmail}"></span>
                         </a>
                     </td>

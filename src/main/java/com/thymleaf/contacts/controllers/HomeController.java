@@ -54,7 +54,7 @@ public class HomeController {
             }
             user.setRole("ROLE_USER");
             user.setIsActive(true);
-            user.setUserImage("default.png");
+            user.setUserImage("contact.png");
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             User res = this.userRepo.save(user);
             model.addAttribute("User", res);

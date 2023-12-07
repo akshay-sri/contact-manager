@@ -31,11 +31,11 @@
         <ul class="navbar-nav ml-auto text-uppercase">
 
             <li class="nav-item">
-                <a th:href="@{/}" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a th:href="@{/index}" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><span th:text="${user.userName}"></span></a>
+                <a th:href="@{/profile}" class="nav-link" href="#" tabindex="-1" aria-disabled="true"><span th:text="${user.userName}"></span></a>
             </li>
 
             <li class="nav-item">
@@ -54,7 +54,7 @@
     <a href="#" th:href="@{/index}"><i class="fa-solid fa-house-chimney"></i> Home</a>
     <a href="#" th:href="@{/show-contact}"><i class="fas fa-id-card-alt"></i> View Contacts</a>
     <a href="#" th:href="@{/add-contact}"><i class="fas fa-pencil-alt"></i> Add Contacts</a>
-    <a href="#"><i class="fa-solid fa-user"></i> Your Profile</a>
+    <a href="#" th:href="@{/profile}"><i class="fa-solid fa-user"></i> Your Profile</a>
     <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
     <a href="#" th:href="@{/logout}"><i class="fas fa-sign-out-alt"></i> Logout</a>
     <div class="divider"></div>

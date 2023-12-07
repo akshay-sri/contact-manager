@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard Page</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="container text-center">
+                    <img src="" style="height: 200px; width: 200px;" class="contact_image" th:src="${user.userImage}" alt="profile photo">
+                </div>
+                <h1 class="text-center mt-3" th:text="${user.userName}"></h1>
+                <table class="table mt-3">
+                    <thead class="thread-dark">
+                    <tr>
+                        <th scope="col">USERID</th>
+                        <th scope="col" th:text="${'USER'+user.userId}">1</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td><span th:text="${user.userEmail}"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Role</th>
+                        <td><span th:text="${user.role}"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">About</th>
+                        <td><span th:text="${user.about}"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Account Active</th>
+                        <td><span th:text="${user.isActive}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -83,4 +83,9 @@ public class UserController {
         session.setAttribute("message",new Message("Contact deleted successfully","success"));
         return "redirect:/show-contact";
     }
+    @GetMapping("/profile")
+    public String yourProfile(Model m){
+        m.addAttribute("title","Profile - MyContact");
+        return "profile";
+    }
 }
