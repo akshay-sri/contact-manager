@@ -72,12 +72,7 @@
 
                             <!--- Description --->
                             <div class="form-group mt-3">
-                                <textarea placeholder="Enter contact description" name="description" id="decsription" class="form-control" rows="10"></textarea>
-                            </div>
-
-                            <!--- Image --->
-                            <div class="custom-file">
-                                <input type="file" name="contactImage"/>
+                                <textarea id="mytextarea" placeholder="Enter contact description" name="contactDesc" class="form-control" rows="10"></textarea>
                             </div>
 
                             <div class="container text-center">
@@ -89,6 +84,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+
 </section>
 </body>
 </html>

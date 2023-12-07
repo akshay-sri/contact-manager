@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ViewContact Page</title>
+</head>
+<body>
+<section>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="text-center">Your Contacts</h1>
+
+            <table class="table">
+                <thead class="thread-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="c : ${contacts}">
+                    <th scope="row" th:text="${'SCM2023'+c.contactId}">1</th>
+                    <td>
+                        <img src="" class="contact_image" th:src="${c.contactImage}" alt="profile photo">
+                    <span th:text="${c.contactName}"></span>
+                    </td>
+                    <td>
+                        <a th:href="@{/contact/{id}(id=${c.contactId})}">
+                            <span th:text="${c.contactEmail}"></span>
+                        </a>
+                    </td>
+                    <td th:text="${c.phone}"></td>
+                    <td>
+                        <a class="btn btn-warning">Update</a>
+                        <a th:href="@{/deleteContact/{id}(id=${c.contactId})}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>
