@@ -12,7 +12,7 @@ import java.util.Properties;
 public class EmailService {
     public boolean sendEmail(String message, String subject, String to) {
         boolean flag=false;
-        String from = "backendemail6@gmail.com";
+        String from = "*******";
         //variable for gmail
         String host="smtp.gmail.com";
 
