@@ -35,3 +35,6 @@ const search=()=>{
         $(".search-result").show();
     }
 };
+document.getElementById("myButton").onclick = function () {
+        location.href = "http://localhost:8282/login";
+    };
